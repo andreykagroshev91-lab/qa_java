@@ -9,16 +9,15 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 @RunWith(Parameterized.class)
 public class LionConstructorTest {
 
-    private String sex;
-    private Boolean expectedHasMane;
-    private Boolean shouldThrowException;
-    private Feline felineMock = Mockito.mock(Feline.class);
+    private final String sex;                    // добавил final
+    private final Boolean expectedHasMane;      // добавил final
+    private final Boolean shouldThrowException; // добавил final
+    private final Feline felineMock = Mockito.mock(Feline.class); // добавил final
 
     public LionConstructorTest(String sex, Boolean expectedHasMane, Boolean shouldThrowException) {
         this.sex = sex;

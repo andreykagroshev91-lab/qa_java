@@ -2,16 +2,18 @@ import com.example.Feline;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 import java.util.Arrays;
 import java.util.Collection;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineGetKittensWithCountTest {
 
-    private int inputCount;
-    private int expectedCount;
-    private Feline feline = new Feline();
+    private final int inputCount;           // добавил final
+    private final int expectedCount;        // добавил final
+    private final Feline feline = new Feline(); // добавил final
 
     public FelineGetKittensWithCountTest(int inputCount, int expectedCount) {
         this.inputCount = inputCount;
